@@ -1,4 +1,4 @@
-package com.wearther;
+ackage com.wearther;
 
 import static org.junit.Assert.assertTrue;
 

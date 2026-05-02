@@ -5,7 +5,14 @@ public class App {
         Dotenv dotenv = Dotenv.load();
         String weatherkey = dotenv.get("OPENWEATHER_API_KEY");
         String groqkey = dotenv.get("GROQ");
-        System.out.println("Weather Key: " + weatherkey);
-        System.out.println("Groq Key: " + groqkey);
+        
+        WeatherService ws = new WeatherService(weatherkey);
+
+        try{
+            String weatherInfo = ws.getWeather("Coimbatore");
+            System.out.println(weatherInfo);
+        } catch (Exception e) {
+            System.out.println("Error fetching weather data: " + e.getMessage());
+        }
     }
 }
