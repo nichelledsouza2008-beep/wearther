@@ -1,2 +1,3 @@
 com\wearther\App.class
+com\wearther\GroqService.class
 com\wearther\WeatherService.class
